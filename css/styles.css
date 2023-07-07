@@ -113,5 +113,11 @@ h1, time {
 .mario {
     width: 120px;
     height: 150px;
+}
+
+.ball {
+    width: 90px;
+    height: 90px;
     background-color: red;
+    border-radius: 50%;
 }
