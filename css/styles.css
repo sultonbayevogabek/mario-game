@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Speed Rush";
+    src: url("../fonts/font.ttf") format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Speed Rush", sans-serif;
+    height: 100vh;
+    background-image: url('/assets/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.game__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1, time {
+    color: #E6DA79;
+    font-size: 60px;
+    letter-spacing: 10px;
+}
+
+.game__section {
+    position: relative;
+    width: 1200px;
+    height: 675px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.game__section video {
+    width: 100%;
+}
+
+.game__border {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.game__start {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+}
+
+
+.game__start button {
+    display: block;
+    font-size: 60px;
+    padding: 0 30px 5px;
+    background-color: #E6DA79;
+    font-family: "Speed Rush", sans-serif;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 10px 0 -2px gray;
+    transition: 0.05s all ease;
+}
+
+.game__start button:active {
+    transform: translateY(10px);
+    box-shadow: none;
+}
+
+.game__rect {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 100px 100px;
+    border: 1px solid white;
+}
+
+.mario-running, .mario-jumping {
+    width: 120px;
+}
+
+.mario {
+    width: 120px;
+    height: 150px;
+    background-color: red;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="game">
+    <div class="game__header">
+        <h1>JUMPING GAME</h1>
+
+        <time>01:34</time>
+    </div>
+
+    <div class="game__section">
+        <video loop muted id="backgroundAnimation">
+            <source src="media/background_animation.mp4" type="video/mp4">
+        </video>
+
+<!--        <img class="game__border" src="assets/border.png" alt="">-->
+
+        <div class="game__start">
+            <button>START</button>
+        </div>
+
+        <div class="game__rect">
+            <div class="mario"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="scripts/scripts.js"></script>
+</body>
+</html>
