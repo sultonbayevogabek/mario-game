@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let jumped = false;
 
     function startGame() {
+        startGameLayer.classList.add('d-none')
         backgroundAnimation.play();
         backgroundAnimation.loop = true;
 
@@ -32,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             startTime = new Date().getTime();
             startGame();
-            startGameLayer.classList.add('d-none')
             ballMoving();
             calculateTime()
             watchCoordinates();
@@ -41,20 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     restartGameButton.addEventListener('click', () => {
         setTimeout(() => {
+            restartGameLayer.classList.add('d-none');
             marioJumpHeight = 0;
             ballCoordinate = 70;
             jumped = false;
-            mario.style.cssText = `transform: translateY(0)`
-            ball.style.cssText = `transform: translateY(70px)`
-            time.textContent = '00:00'
+            mario.style.cssText = `transform: translateY(0)`;
+            ball.style.cssText = `transform: translateY(70px)`;
+            time.textContent = '00:00';
             startTime = new Date().getTime();
             startGame();
-            restartGameLayer.classList.add('d-none')
             ballMoving();
-            calculateTime()
+            calculateTime();
             watchCoordinates();
-        }, 300)
-    })
+        }, 300);
+    });
 
     function jump() {
         jumpSound.volume = 0.5;
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let duration = Math.round((currentTime - startTime) / 1000);
             let minutes = Math.floor(duration / 60);
             let seconds = duration - minutes * 60;
-             time.textContent = `${ minutes < 10 ? '0' + minutes : minutes}:${ seconds < 10 ? '0' + seconds : seconds}`
+            time.textContent = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`
         }, 1000)
     }
 
